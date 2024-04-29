@@ -1,0 +1,30 @@
+.mainContainer{
+width: 100%;
+}
+
+.header_container,
+.nav_container{
+    display: flex;
+}
+
+.header_container{
+    width: 100%;
+    height: 56px;
+    justify-content: space-between;
+    background-color: #161D2F;
+
+}
+
+.header_container > img {
+    width: 24px;
+    height: 24px;
+}
+
+.nav_container{
+    justify-content: space-between;
+    gap: 24px;
+}
+.nav_container > img{
+    width: 16px;
+    height: 16px;;
+}
