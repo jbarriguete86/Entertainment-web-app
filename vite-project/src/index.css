@@ -7,7 +7,20 @@
 }
 
 :root{
-  --clr-white: 0 0% 100%;
+  --clr-white: #FFFFFF;
+  --dark-blue: #10141E;
+  --semi-dark-blue: #161D2F;
+  --greyish-blue: #5A698F;
+  --hover-red: #FC4747;
+  --type-light: 300;
+  --type-medium: 500;
+  --heading-large: 2rem;
+  --heading-medium-small: 1.5rem;
+  --heading-extra-small: 1.125rem;
+  --body-medium: 0.937rem;
+  --body-small: 0.8125rem;
+
+
 }
 
 body {
@@ -17,5 +30,5 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #D0D6F9;
-    background: #222222;
+    background: var(--dark-blue);
 }

@@ -11,13 +11,15 @@ width: 100%;
     width: 100%;
     height: 56px;
     justify-content: space-between;
-    background-color: #161D2F;
+    background-color: var(--semi-dark-blue);
+    align-items: center;
+    padding: 0 16px;
 
 }
 
 .header_container > img {
     width: 24px;
-    height: 24px;
+    object-fit: scale-down;
 }
 
 .nav_container{
@@ -26,5 +28,10 @@ width: 100%;
 }
 .nav_container > img{
     width: 16px;
-    height: 16px;;
+    object-fit: scale-down;
+}
+
+.active{
+    color: var(--clr-white);
+    width: 7rem;
 }
