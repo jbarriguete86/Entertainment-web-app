@@ -17,10 +17,11 @@ useEffect(()=>{
 
     const items= data && data.map(element =>{
        const {title, thumbnail, year, category, rating, isBookmarked, isTrending} = element
-        
+        const image = thumbnail.regular.small
+        console.log(image)
        return (
         <div key={title}>
-        <img src={thumbnail.regular.small} alt="image of the movie"/>
+        <img src={image} alt="image of the movie"/>
         <div className={styles.elements_container}>
             <div className={styles.element_inner_container}>
                 <p>{year}</p>
