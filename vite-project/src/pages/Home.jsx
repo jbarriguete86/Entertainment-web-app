@@ -18,24 +18,43 @@ useEffect(()=>{
         setData(Data)
     }
 
-    const items= data && data.map(element =>{
+    function handleBookmark(index){
+        const newData = data[index]
+        const updateData = {...newData, isBookmarked:!newData.isBookmarked}
+        setData(prevData=>{
+            const newDataArr = [...prevData]
+            newDataArr[index] = updateData
+            return newDataArr
+            })
+    }
+
+    const items= data && data.map((element,index) =>{
        const {title, thumbnail, year, category, rating, isBookmarked, isTrending} = element
         const image = thumbnail.regular.small
        return (
-        <div key={title}>
-        <img className={styles.main_image} src={image} alt="image of the movie"/>
-        <div className={styles.elements_container}>
-            <img src={isBookmarked ? bookmarked : notBookmarked} alt="bookmark logo"/>
-            <div className={styles.element_inner_container}>
-                <p>{year}</p>
-                <p>
-                <span><img src={category === "Movie" ? movieLogo : seriesLogo } alt="logo of the category"/></span>
-                {category}
-                </p>
-                <p>{rating}</p>
+        <div className={styles.movie_container} key={title}>
+            <img className={styles.main_image} src={image} alt="image of the movie"/>
+            <div onClick={()=>handleBookmark(index)} className={styles.bookmark_logo}>
+                <img  src={isBookmarked ? bookmarked : notBookmarked} alt="bookmark logo"/>
             </div>
-            <p>{title}</p>
-        </div>
+            <div className={styles.elements_container}>
+                <div className={styles.inner_container}>
+                    <p>{year}</p>
+                    <div className={styles.dot} >
+                        <p>.</p>
+                    </div>
+                    <p>
+                    <span><img src={category === "Movie" ? movieLogo : seriesLogo } alt="logo of the category"/></span>
+                    {category}
+                    </p>
+                    <div className={styles.dot} >
+                        <p>.</p>
+                    </div>
+                    <p>{rating}</p>
+
+                </div>
+            </div>
+                <p>{title}</p>
         </div>
         )
     })
@@ -44,7 +63,12 @@ useEffect(()=>{
     return (
         <>
         <Trending/>
-        {data && items }
+        <div className={styles.recommended_container}>
+            <p>Recommended for you</p>
+            <div className={styles.recommended_inner}>
+                {data && items }
+            </div>
+        </div>
         </>
     )
 }

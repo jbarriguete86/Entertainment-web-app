@@ -5,6 +5,7 @@ import movieLogo from "../assets/icon-category-movie.svg"
 import seriesLogo from "../assets/icon-category-tv.svg"
 import notBookmarked from "../assets/icon-bookmark-empty.svg"
 import bookmarked from "../assets/icon-bookmark-full.svg"
+// import {handleBookmark} from "../utilities"
 
 export default function Trending(){
     const [data, setData] = useState()
@@ -13,14 +14,22 @@ export default function Trending(){
         getData()
     }, [Data])
     
-    console.log(data)
+        function handleBookmark(index){
+            const newData = data[index]
+            const updateData = {...newData, isBookmarked:!newData.isBookmarked}
+            setData(prevData=>{
+                const newDataArr = [...prevData]
+                newDataArr[index] = updateData
+                return newDataArr
+                })
+        }
 
         function getData(){
             const newData=Data.filter(dat => dat.isTrending)
             setData(newData)
         }
 
-        const items= data && data.map(element =>{
+        const items= data && data.map((element, index) =>{
             const {title, thumbnail, year, category, rating, isBookmarked, isTrending} = element
              const image = thumbnail.trending.small
 
@@ -28,7 +37,7 @@ export default function Trending(){
              <div className={styles.top_container} key={title}>
              <img className={styles.main_image} src={image} alt="image of the movie"/>
              <div className={styles.elements_container}>
-                 <p className={styles.bookmark_img}>
+                 <p onClick={()=>handleBookmark(index)} id={index} className={styles.bookmark_img}>
                     <img src={isBookmarked ? bookmarked : notBookmarked} alt="bookmark logo"/>
                 </p>
                  <div className={styles.element_inner_container}>
