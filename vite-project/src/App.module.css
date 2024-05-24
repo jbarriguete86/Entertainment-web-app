@@ -14,12 +14,15 @@
 
 .recommended_inner{
     display: grid;
-    width: 343px;
+    width: 95%;
+    /* border: 1px solid rgb(249, 249, 255); */
     grid-template-columns: repeat(2, auto);
     gap: 15px;
 }
 
 .movie_container {
+    /* border: 1px red solid; */
+    width: 50%;
     min-width: 164px;
     position: relative;
 }
@@ -66,6 +69,32 @@
 .movie_container > p {
     font-size: 0.875rem;
     font-weight: 300;
+}
+
+.search_container{
+    display: flex;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em  0 1em 16px;
+}
+
+.search_container > img{
+   width: 24px;
+}
+
+.search{
+    height: 100%;;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    resize: none;
+    font-family: "Outfit", sans-serif;
+    line-height: 34px;
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
 }
 
 

@@ -5,6 +5,7 @@ import movieLogo from "../assets/icon-category-movie.svg"
 import seriesLogo from "../assets/icon-category-tv.svg"
 import notBookmarked from "../assets/icon-bookmark-empty.svg"
 import bookmarked from "../assets/icon-bookmark-full.svg"
+import searchIcon from "../assets/icon-search.svg"
 import Trending from "../components/Trending"
 
 export default function Home(){
@@ -62,6 +63,10 @@ useEffect(()=>{
 
     return (
         <>
+        <div className={styles.search_container}>
+            <img src={searchIcon} alt="images of the magnifier"/>
+            <textarea className={styles.search} placeholder="Search for movies or TV Series"/>
+        </div>
         <Trending/>
         <div className={styles.recommended_container}>
             <p>Recommended for you</p>
