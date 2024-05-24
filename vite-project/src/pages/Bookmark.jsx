@@ -68,9 +68,9 @@ export default function Movies(){
                 <img src={searchIcon} alt="images of the magnifier"/>
                 <textarea className={styles.search} placeholder="Search for bookmarked shows"/>
             </div>
-            <div className={styles.recommended_container}>
+            <div className={styles.main_container}>
                 <p>Bookmarked Movies</p>
-                <div className={styles.recommended_inner}>
+                <div className={styles.main_inner}>
                     {data && items }
                 </div>
             </div>

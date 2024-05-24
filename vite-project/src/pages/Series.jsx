@@ -66,9 +66,9 @@ export default function Movies(){
                 <img src={searchIcon} alt="images of the magnifier"/>
                 <textarea className={styles.search} placeholder="Search for TV Series"/>
             </div>
-            <div className={styles.recommended_container}>
+            <div className={styles.main_container}>
                 <p>TV Series</p>
-                <div className={styles.recommended_inner}>
+                <div className={styles.main_inner}>
                     {data && items }
                 </div>
             </div>

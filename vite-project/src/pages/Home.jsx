@@ -68,9 +68,9 @@ useEffect(()=>{
             <textarea className={styles.search} placeholder="Search for movies or TV Series"/>
         </div>
         <Trending/>
-        <div className={styles.recommended_container}>
+        <div className={styles.main_container}>
             <p>Recommended for you</p>
-            <div className={styles.recommended_inner}>
+            <div className={styles.main_inner}>
                 {data && items }
             </div>
         </div>
