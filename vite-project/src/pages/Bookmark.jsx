@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useEffect, useState, useRef} from "react"
 import Data from "../data.json"
 import movieLogo from "../assets/icon-category-movie.svg"
 import seriesLogo from "../assets/icon-category-tv.svg"
@@ -9,6 +9,8 @@ import styles from "../App.module.css"
 
 export default function Movies(){
     const [data, setData] = useState()
+    const [searchData, setSearchData]= useState({searchValue:""})
+    const timeoutRef = useRef(null)
 
     useEffect(()=>{
         getData()
@@ -28,6 +30,26 @@ export default function Movies(){
                 newDataArr[index] = updateData
                 return newDataArr
                 })
+        }
+
+        function handleChange(e){
+            const dataAll= Data.filter(dat => dat.isBookmarked)
+            setSearchData({ searchValue: e.target.value.toLowerCase() })
+
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+              }
+          
+              timeoutRef.current = setTimeout(() => {
+                    if(e.target.value){
+                        const filteredData= dataAll.filter(element=> element.title.toLowerCase().includes(searchData.searchValue))
+                        setData(filteredData)
+                    } else {
+                        getData()
+                    }
+
+              }, 500)
+        
         }
     
         const items= data && data.map((element,index) =>{
@@ -66,7 +88,13 @@ export default function Movies(){
             <div className={styles.site_wrapper}>
             <div className={styles.search_container}>
                 <img src={searchIcon} alt="images of the magnifier"/>
-                <textarea className={styles.search} placeholder="Search for bookmarked shows"/>
+                <input 
+                type="text"
+                className={styles.search} 
+                name="searchValue"
+                value={searchData.searchValue}
+                onChange={handleChange}
+                placeholder="Search for bookmarked shows"/>
             </div>
             <div className={styles.main_container}>
                 <p>Bookmarked Movies</p>

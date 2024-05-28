@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState, useEffect, useRef} from "react"
 import Data from "../data.json"
 import styles from "../App.module.css"
 import movieLogo from "../assets/icon-category-movie.svg"
@@ -10,10 +10,16 @@ import Trending from "../components/Trending"
 
 export default function Home(){
 const [data, setData] = useState()
+const [searchData, setSearchData]= useState({searchValue:""})
+const timeoutRef = useRef(null)
 
 useEffect(()=>{
     getData()
 }, [Data])
+
+useEffect(()=>{
+    console.log(searchData)
+}, [searchData])
 
     function getData(){
         setData(Data)
@@ -27,6 +33,26 @@ useEffect(()=>{
             newDataArr[index] = updateData
             return newDataArr
             })
+    }
+
+    function handleChange(e){
+        const dataAll= Data.filter(dat => dat.category === "Movie")
+        setSearchData({ searchValue: e.target.value.toLowerCase() })
+
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+              }
+          
+              timeoutRef.current = setTimeout(() => {
+                    if(e.target.value){
+                        const filteredData= dataAll.filter(element=> element.title.toLowerCase().includes(searchData.searchValue))
+                        setData(filteredData)
+                    } else {
+                        getData()
+                    }
+
+              }, 500)
+        
     }
 
     const items= data && data.map((element,index) =>{
@@ -65,7 +91,13 @@ useEffect(()=>{
         <div className={styles.site_wrapper}>
         <div className={styles.search_container}>
             <img src={searchIcon} alt="images of the magnifier"/>
-            <textarea className={styles.search} placeholder="Search for movies or TV Series"/>
+            <input 
+                type="text"
+                className={styles.search} 
+                name="searchValue"
+                value={searchData.searchValue}
+                onChange={handleChange}
+                placeholder="Search for movies or TV Series"/>
         </div>
         <Trending/>
         <div className={styles.main_container}>
