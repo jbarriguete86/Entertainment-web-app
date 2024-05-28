@@ -62,7 +62,7 @@ useEffect(()=>{
 
 
     return (
-        <>
+        <div className={styles.site_wrapper}>
         <div className={styles.search_container}>
             <img src={searchIcon} alt="images of the magnifier"/>
             <textarea className={styles.search} placeholder="Search for movies or TV Series"/>
@@ -74,6 +74,6 @@ useEffect(()=>{
                 {data && items }
             </div>
         </div>
-        </>
+        </div>
     )
 }

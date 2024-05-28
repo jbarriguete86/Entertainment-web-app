@@ -61,7 +61,7 @@ export default function Movies(){
     
     
         return (
-            <>
+            <div className={styles.site_wrapper}>
             <div className={styles.search_container}>
                 <img src={searchIcon} alt="images of the magnifier"/>
                 <textarea className={styles.search} placeholder="Search for movies "/>
@@ -72,6 +72,6 @@ export default function Movies(){
                     {data && items }
                 </div>
             </div>
-            </>
+            </div>
         )
     }

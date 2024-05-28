@@ -1,4 +1,4 @@
-.site_wrapper{
+.layout_wrapper{
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -108,4 +108,89 @@
     border-radius: 50%;
     background-color: rgba(90, 105, 143, 0.75);;
     margin-left: 85%;
+}
+
+@media (min-width: 540px){
+  
+    .trend_container > p { 
+        font-size: 3rem;
+    }
+    
+    .main_image{
+        width: 470px;
+    }
+    
+    .element_inner_container{
+        margin-top: 155px;
+        font-weight: 100;
+    }
+    
+    .element_inner_container > p {
+        font-size: 1rem;
+    }
+
+    .elements_container > p:last-child{
+        font-size: 1.5rem;
+    }
+
+    .bookmark_img{
+        width: 64px;
+        height: 64px;
+    }
+
+    .bookmark_img > img {
+        width: 24px;
+    }
+}
+
+@media (min-width: 1024px){
+    .layout_wrapper{
+        flex-direction: row;
+    }
+
+    .header_container,
+    .nav_container{
+        flex-direction: column;
+    
+    }
+
+    .header_container{
+        margin: 1em 0 1em 1em;
+        height: 95dvh;
+        width: 96px;
+        justify-content:space-between;
+        padding: 2em 0;
+        border-radius: 15px;
+    }
+
+    .header_container > img{
+        width: 20px;
+    }
+
+    .nav_container{
+        margin-bottom: 20em;
+        gap: 40px;
+    }
+
+    .nav_container > a > img{
+        width: 20px;
+    }
+
+    
+    .element_inner_container{
+        margin-top: 140px;
+    }
+    
+
+
+    .bookmark_img{
+        width: 45px;
+        height: 45px;
+    }
+
+    .bookmark_img > img {
+        width: 20px;
+    }
+
+
 }
