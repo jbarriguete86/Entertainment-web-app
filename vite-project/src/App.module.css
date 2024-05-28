@@ -109,11 +109,12 @@
     
     .main_inner{
         grid-template-columns: repeat(3, auto);
+        width: 85svw;
  
     }
     
     .movie_container {
-        width: 100%;
+        width: 90%;
     }
     
     
@@ -148,6 +149,7 @@
 
     .main_inner{
         grid-template-columns: repeat(4, auto);
+        gap: 1px;
  
     }
 
