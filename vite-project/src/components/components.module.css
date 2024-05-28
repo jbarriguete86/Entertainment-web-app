@@ -110,6 +110,18 @@
     margin-left: 85%;
 }
 
+.bookmark_img:hover{
+    background-color: var(--clr-white);
+}
+
+.bookmark_img:hover > img{
+    filter: invert(1);
+}
+
+.top_container:hover{
+    filter:brightness(60%);
+}
+
 @media (min-width: 540px){
   
     .trend_container > p { 

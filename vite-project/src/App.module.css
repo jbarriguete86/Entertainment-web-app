@@ -50,6 +50,18 @@
     justify-content: center;
 }
 
+.movie_container > .bookmark_logo:hover{
+    background-color: var(--clr-white);
+}
+
+.movie_container > .bookmark_logo:hover > img{
+    filter: invert(1);
+}
+
+.main_image:hover{
+    filter:brightness(60%);
+}
+
 .elements_container > .inner_container{
     display: flex;
     gap: 6px;
