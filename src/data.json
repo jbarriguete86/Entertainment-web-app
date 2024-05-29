@@ -128,9 +128,9 @@
     "title": "Earth’s Untouched",
     "thumbnail": {
       "regular": {
-        "small": "../src/assets/thumbnails/earths-untouched/regular/small.jpg",
-        "medium": "../src/assets/thumbnails/earths-untouched/regular/medium.jpg",
-        "large": "../src/assets/thumbnails/earths-untouched/regular/large.jpg"
+        "small": "/assets/thumbnails/earths-untouched/regular/small.jpg",
+        "medium": "/assets/thumbnails/earths-untouched/regular/medium.jpg",
+        "large": "/assets/thumbnails/earths-untouched/regular/large.jpg"
       }
     },
     "year": 2017,
@@ -143,9 +143,9 @@
     "title": "No Land Beyond",
     "thumbnail": {
       "regular": {
-        "small": "../src/assets/thumbnails/no-land-beyond/regular/small.jpg",
-        "medium": "../src/assets/thumbnails/no-land-beyond/regular/medium.jpg",
-        "large": "../src/assets/thumbnails/no-land-beyond/regular/large.jpg"
+        "small": "/assets/thumbnails/no-land-beyond/regular/small.jpg",
+        "medium": "/assets/thumbnails/no-land-beyond/regular/medium.jpg",
+        "large": "/assets/thumbnails/no-land-beyond/regular/large.jpg"
       }
     },
     "year": 2019,
@@ -158,9 +158,9 @@
     "title": "During the Hunt",
     "thumbnail": {
       "regular": {
-        "small": "../src/assets/thumbnails/during-the-hunt/regular/small.jpg",
-        "medium": "../src/assets/thumbnails/during-the-hunt/regular/medium.jpg",
-        "large": "../src/assets/thumbnails/during-the-hunt/regular/large.jpg"
+        "small": "/assets/thumbnails/during-the-hunt/regular/small.jpg",
+        "medium": "/assets/thumbnails/during-the-hunt/regular/medium.jpg",
+        "large": "/assets/thumbnails/during-the-hunt/regular/large.jpg"
       }
     },
     "year": 2016,
