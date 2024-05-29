@@ -1,11 +1,11 @@
 import React, {useState, useEffect, useRef} from "react"
 import Data from "../data.json"
 import styles from "../App.module.css"
-import movieLogo from "../assets/icon-category-movie.svg"
-import seriesLogo from "../assets/icon-category-tv.svg"
-import notBookmarked from "../assets/icon-bookmark-empty.svg"
-import bookmarked from "../assets/icon-bookmark-full.svg"
-import searchIcon from "../assets/icon-search.svg"
+import movieLogo from "../../public/assets/icon-category-movie.svg"
+import seriesLogo from "../../public/assets/icon-category-tv.svg"
+import notBookmarked from "../../public/assets/icon-bookmark-empty.svg"
+import bookmarked from "../../public/assets/icon-bookmark-full.svg"
+import searchIcon from "../../public/assets/icon-search.svg"
 import Trending from "../components/Trending"
 
 export default function Home(){

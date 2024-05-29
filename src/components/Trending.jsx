@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from "react"
 import styles from "./components.module.css"
 import Data from "../data.json"
-import movieLogo from "../assets/icon-category-movie.svg"
-import seriesLogo from "../assets/icon-category-tv.svg"
-import notBookmarked from "../assets/icon-bookmark-empty.svg"
-import bookmarked from "../assets/icon-bookmark-full.svg"
-// import {handleBookmark} from "../utilities"
+import movieLogo from "../../public/assets/icon-category-movie.svg"
+import seriesLogo from "../../public/assets/icon-category-tv.svg"
+import notBookmarked from "../../public/assets/icon-bookmark-empty.svg"
+import bookmarked from "../../public/assets/icon-bookmark-full.svg"
 
 export default function Trending(){
     const [data, setData] = useState()

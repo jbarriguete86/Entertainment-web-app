@@ -1,9 +1,9 @@
 import React, {useEffect, useState, useRef} from "react"
 import Data from "../data.json"
-import movieLogo from "../assets/icon-category-movie.svg"
-import notBookmarked from "../assets/icon-bookmark-empty.svg"
-import bookmarked from "../assets/icon-bookmark-full.svg"
-import searchIcon from "../assets/icon-search.svg"
+import movieLogo from "../../public/assets/icon-category-movie.svg"
+import notBookmarked from "../../public/assets/icon-bookmark-empty.svg"
+import bookmarked from "../../public/assets/icon-bookmark-full.svg"
+import searchIcon from "../../public/assets/icon-search.svg"
 import styles from "../App.module.css"
 
 export default function Movies(){

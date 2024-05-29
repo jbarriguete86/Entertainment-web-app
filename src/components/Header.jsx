@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react"
 import { NavLink, useLocation } from "react-router-dom"
 import styles from "./components.module.css"
-import logoImg from "../assets/logo.svg"
-import homeImg from "../assets/icon-nav-home.svg"
-import movieImg from "../assets/icon-nav-movies.svg"
-import tvImg from "../assets/icon-nav-tv-series.svg"
-import bookmarkImg from "../assets/icon-nav-bookmark.svg"
-import avatar from "../assets/image-avatar.png"
+import logoImg from "../../public/assets/logo.svg"
+import homeImg from "../../public/assets/icon-nav-home.svg"
+import movieImg from "../../public/assets/icon-nav-movies.svg"
+import tvImg from "../../public/assets/icon-nav-tv-series.svg"
+import bookmarkImg from "../../public/assets/icon-nav-bookmark.svg"
+import avatar from "../../public/assets/image-avatar.png"
 
 export default function Header(){
     const [page, setPage]=useState()
